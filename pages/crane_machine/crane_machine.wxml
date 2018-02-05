@@ -1,0 +1,36 @@
+<!--pages/crane_machine/crane_machine.wxml-->
+<image src='/mipmap/wwj_img.png' class='head_img'></image>
+<view class='container'>
+  <text class='title_font'>剩余游戏币总数</text>
+  <view style='text-align: center;'>
+    <text class='last_coin'>{{balance}}</text>
+    <text class='last_coins'>币</text>
+  </view>
+  <text class='recharge' bindtap='recharge'>充值</text>
+  <view class='line'></view>
+
+  <view class='hor_layout' wx:if="{{isUsableCoupon==1}}">
+    <view class='play' bindtap='play' data-info='0'>我要玩
+      <text class='plays'>({{needCoin}}币/次)</text>
+    </view>
+    <view class='play' bindtap='play' style='background:#ffd72d' data-info='1'>我要玩
+      <text class='plays'>1张优惠券/次</text>
+    </view>
+  </view>
+  <view wx:elif="{{isUsableCoupon!=1}}">
+    <view class='play' bindtap='play' data-info='0'>我要玩
+      <text class='plays'>({{needCoin}}币/次)</text>
+    </view>
+  </view>
+
+  <text bindtap='scan' class='scan'>扫一扫></text>
+</view>
+
+<!--modeal  -->
+<image hidden='{{hiddelMoeal}}' src='/mipmap/bg_t2.png' style='width:{{systemInfo.windowWidth}}px;height:{{systemInfo.windowHeight}}px;' class='bac'></image>
+<view hidden='{{hiddelMoeal}}' class='modeal' style='height : 700rpx;top:150rpx'>
+  <text class='product_name' style='margin-top : 70rpx;display:block;margin-left:60rpx;'>啊 哦,游戏币不够了</text>
+  <image src='/mipmap/img.png' class='big_pic' mode='aspectFit' style="height200rpx;width:228rpx"></image>
+  <text class='pay_btn' style='' bindtap='recharge'>去充值</text>
+</view>
+<image hidden='{{hiddelMoeal}}' class='cancal_modeal' src='/mipmap/close.png' style='top :900rpx;' bindtap='cancal'></image>

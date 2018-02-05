@@ -1,0 +1,26 @@
+<!--pages/user/shareInfo/shareInfo.wxml-->
+<image style='width:100%;height:598rpx;' src='/mipmap/enjoy_bg.png'>
+</image>
+<!-- <view class='container' style='height:688rpx;width:100%'> -->
+<!-- <text class='title_fount'>已获得游戏币数量</text>
+  <text class='coin_num'>{{shareInfo.share_coin}}</text>
+  <image src='/mipmap/jinbi.png' class='coin_img'></image> -->
+<button class='share_btn' open-type='share' bindtap='shareKnow'>立即分享</button>
+<!-- </view>  -->
+<view class='container'>
+  <image src='/mipmap/bg_t.png' style='height:37+{{nodes.length*26}}rpx ; left:20rpx ; position: absolute;  top: 720rpx ; width:710rpx;'>
+  </image>
+  <!-- <view class='content_layout ' style='background-image: url(/mipmap/bg_t.png);height:37+{{nodes.length*42}}rpx ; margin:20rpx '> -->
+  <text style="color:#fff ;line-hight:28rpx;font-size:28rpx ;margin-bottom : 40rpx;">说明</text>
+  <rich-text nodes="{{nodes}}" style='margin-bottom:40rpx;margin-left:20rpx; width:710rpx'>
+  </rich-text>
+  <!-- </view> -->
+  <view class="hor_layout">
+    <text class='title_font '>已有{{shareInfo.share_num}}人加入，获得{{shareInfo.share_coin}}优惠券
+  </text>
+    <text class='look_info' bindtap='lookInfo'>查看</text>
+  </view>
+
+  <view>
+  </view>
+</view>

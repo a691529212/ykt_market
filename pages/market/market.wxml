@@ -1,0 +1,60 @@
+<!--pages/market/market.wxml-->
+<scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+  <view class="tab-item {{currentTab==index?'active':''}}" data-current="{{index}}" bindtap="swichNav" wx:for="{{sortList}}" wx:key="{{index}}">{{item.title}}</view>
+</scroll-view>
+
+<view style=' width : 100%; align-items: center;align-content: center;height: 88rpx;'>
+  <!-- <image src='/mipmap/anmo_img.png'></image> -->
+</view>
+<text class='title_name'> {{title}}</text>
+<swiper circular="true" bindchange="swiper_change" class='tab_layout' current="{{currentTab}}" style='height : {{height}}'>
+  <block wx:for="{{sortList}}" wx:key="{{index}}" wx:for-index="i">
+    <swiper-item bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">
+      <scroll-view wx:if="{{sortList[i].products.length>9}}" style='height:{{height}};' bindscrolltolower="onBottom" scroll-y="true" scroll-into-view="0" scroll-top="{{st}}" bindscrolltoupper="onTop" upper-threshold="0" lower-threshold="0" bindscroll="onScroll">
+        <view wx:for="{{sortList[i].products}}" wx:key="{{index}}" wx:for-index="j" class='item_layout'>
+          <view style='background: #ffffff; display:block;border: 1rpx solid #ebebeb' bindtap='itemClick' data-info='{{sortList[i].products[j]}}'>
+            <image src='{{sortList[i].products[j].pic}}' class='product_img' mode="aspectFit" />
+            <text class='product_name'>{{sortList[i].products[j].name}}</text>
+            <text class='product_des'>库存：{{sortList[i].products[j].stock}}</text>
+            <view style='display : flex ; justify-content: space-between ;'>
+              <text class='price_font'>{{sortList[i].products[j].price}}</text>
+              <image src='/mipmap/buy_2.png' class='buy_icon'></image>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+
+      <scroll-view wx:elif="{{sortList[i].products.length<=9}}" style='height:{{systemInfo.windowHeight}}px'>
+        <view wx:for="{{sortList[i].products}}" wx:key="{{index}}" wx:for-index="j" class='item_layout'>
+          <view style='background: #ffffff; display:block;border: 1rpx solid #ebebeb' bindtap='itemClick' data-info='{{sortList[i].products[j]}}'>
+            <image src='{{sortList[i].products[j].pic}}' class='product_img' mode="aspectFit" />
+            <text class='product_name'>{{sortList[i].products[j].name}}</text>
+            <text class='product_des'>库存：{{sortList[i].products[j].stock}}</text>
+            <view style='display : flex ; justify-content: space-between ;'>
+              <text class='price_font'>{{sortList[i].products[j].price}}</text>
+              <image src='/mipmap/buy_2.png' class='buy_icon'></image>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+
+    </swiper-item>
+  </block>
+</swiper>
+
+<image hidden='{{!isEmpty}}' src='/mipmap/top_img.png' style='width:348rpx;height:44rpx;margin-left:190rpx;margin-top:60rpx'></image>
+<!-- <view hidden='{{!isEmpty}}' style='font-size:28rpx;color:#404040;display:block;margin:170rpx 0 170rpx 0;width:100%;text-align: center'>暂无货品 敬请期待</view> -->
+<image hidden='{{!isEmpty}}' src='/mipmap/con_img.png' style='width:369rpx;height:269rpx;margin-left:190rpx'></image>
+
+
+
+
+
+<image hidden='{{hiddelMoeal}}' src='/mipmap/bg_t2.png' style='width:{{systemInfo.windowWidth}}px;height:{{systemInfo.windowHeight}}px' class='bac'></image>
+<view hidden='{{hiddelMoeal}}' class='modeal'>
+  <image src='{{info.pic}}' class='big_pic' mode='aspectFit'></image>
+  <text class='product_name' style='margin-top : 60rpx;display:block;text-align: start;margin-left:60rpx;'>{{info.name}}</text>
+  <text class='price_font' style='margin-top : 30rpx; text-align: start;display:block;margin-left:60rpx; '>¥ {{info.price}}</text>
+  <text class='pay_btn' style='margin-top : 40rpx;' bindtap='pay_know'>立即付款</text>
+</view>
+<image hidden='{{hiddelMoeal}}' class='cancal_modeal' src='/mipmap/close.png' bindtap='cancal'></image>

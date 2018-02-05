@@ -1,0 +1,18 @@
+<!--pages/armchair/armchair.wxml-->
+<image src='{{jsonData.banner}}' class='head_img'></image>
+<view wx:for="{{jsonData.list}}" wx:key="{{index}}" class='item_layout' data-info='{{item}}' bindtap='itemClick'>
+  <text style='font-size:32rpx;color:#404040;line-height:44rpx;'>{{item.title}}</text>
+  <text style='display: block ; font-size:28rpx;color : #989898;line-height:40rpx;'>¥ {{item.price}}</text>
+  <text style='display: block;font-size:28rpx;color: #db434e;line-height:40rpx;'>{{item.duration}}分钟</text>
+</view>
+
+<!--modeal  -->
+<image hidden='{{hiddelMoeal}}' src='/mipmap/bg_t2.png' style='width:{{systemInfo.windowWidth}}px;height:{{systemInfo.windowHeight}}px;' class='bac'></image>
+<view hidden='{{hiddelMoeal}}' class='modeal' style='height : 840rpx'>
+  <image src='{{jsonData.pic}}' class='big_pic' mode='aspectFit'></image>
+  <text class='product_name' style='margin-top : 30rpx;display:block;text-align: start;margin-left:60rpx;'>{{info.title}}</text>
+  <text class='product_name' style='margin-top : 30rpx;display:block;text-align: start;margin-left:60rpx;'>{{info.duration}}分钟</text>
+  <text class='price_font' style='margin-top : 30rpx;   text-align: start;display:block;margin-left:60rpx; color : #db434e'>¥ {{info.price}}</text>
+  <text class='pay_btn' style='margin-top : 30rpx;' bindtap='pay_know'>立即付款</text>
+</view>
+<image hidden='{{hiddelMoeal}}' class='cancal_modeal' src='/mipmap/close.png' style='top :990rpx;' bindtap='cancal'></image>

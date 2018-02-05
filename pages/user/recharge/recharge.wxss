@@ -1,0 +1,38 @@
+/* pages/user/recharge/recharge.wxss */
+
+.item_layout {
+  width: 371rpx;
+  height: 198rpx;
+  display: inline-block;
+  align-items: center;
+  border: 1rpx solid #f1f1f3;
+}
+
+.line {
+  width: 100%;
+  border-bottom: 20rpx solid #f1f1f3;
+}
+
+.title {
+  width: 100%;
+  line-height: 92rpx;
+  margin-left: 20rpx;
+  color: #404040;
+}
+
+.coin_num {
+  margin-top: 50rpx;
+  display: block;
+  font-size: 40rpx;
+  color: #404040;
+  text-align: center;
+  justify-content: center;
+}
+
+.praice {
+  display: block;
+  color: #db434e;
+  font-size: 28rpx;
+  text-align: center;
+  justify-content: center;
+}

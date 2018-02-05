@@ -1,0 +1,55 @@
+/* pages/user/report/report.wxss */
+
+.item_layout {
+  width: 50%;
+  height: 200rpx;
+  display: inline-block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border: 1rpx solid #f1f1f3;
+  align-content: center;
+  padding: 40rpx;
+}
+
+.title_font {
+  text-align: center;
+  font-size: 28rpx;
+}
+
+.scan_layout {
+  justify-content: flex-start;
+  display: flex;
+  height: 130rpx;
+  align-items: center;
+  line-height: 130rpx;
+  padding-left: 40rpx;
+}
+
+.report_edit {
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  width: 670rpx;
+  height: 480rpx;
+  border-radius: 10rpx;
+  background: #f1f1f3;
+  padding: 20rpx;
+}
+
+.confirm {
+  background: #db434f;
+  color: #fff;
+  line-height: 90rpx;
+  margin-top: 30rpx;
+  font-size: 34rpx;
+  width: 600rpx;
+  border-radius: 45rpx;
+}
+
+.confirm::after {
+  border-top-left-radius: 45rpx;
+  border-top-right-radius: 45rpx;
+  border-bottom-left-radius: 45rpx;
+  border-bottom-right-radius: 45rpx;
+}

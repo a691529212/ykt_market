@@ -1,0 +1,120 @@
+/* pages/map/map.wxss */
+
+.mapClass {
+  width: 100%;
+}
+
+.scan_layout {
+  position: fixed;
+  display: flex;
+  width: 240rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  color: #fff;
+  background: #404040;
+  line-height: 100rpx;
+  z-index: 999;
+}
+
+.gwj {
+  position: absolute;
+  right: 20rpx;
+  top: 120rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.wwj {
+  position: absolute;
+  right: 20rpx;
+  top: 210rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.amy {
+  position: absolute;
+  right: 20rpx;
+  top: 300rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.back {
+  position: absolute;
+  right: 20rpx;
+  top: 390rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.search_view {
+  display: flex;
+  width: 710rpx;
+  height: 90rpx;
+  align-items: center;
+  position: absolute;
+  top: 20rpx;
+  left: 20rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  color: #c7c7c7;
+  font-size: 32rpx;
+  line-height: 90rpx;
+  text-align: left;
+  text-indent: 60rpx;
+  overflow: hidden;
+}
+
+.search {
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 200rpx;
+}
+
+.postion {
+  position: absolute;
+  left: 20rpx;
+  bottom: 50rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.scan {
+  position: absolute;
+  left: 245rpx;
+  bottom: 40rpx;
+  width: 240rpx;
+  height: 100rpx;
+}
+
+.user {
+  position: absolute;
+  right: 20rpx;
+  bottom: 50rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.mac_view {
+  width: 690rpx;
+  height: 150rpx;
+  position: relative;
+  top: 75%;
+  display: flex;
+  background: #fff;
+  border-radius: 10rpx;
+  left: 30rpx;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ver_layout {
+  padding: 10rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20rpx;
+}

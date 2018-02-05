@@ -1,0 +1,29 @@
+<!--pages/map/map.wxml-->
+<view class='container'>
+  <map class='mapClass' id='main_map' longitude='{{lont}}' latitude='{{lat}}' style='height:{{mapHight}}px' show-location="true" bindregionchange="regionchange" bindupdated="updated" scale='{{mapTool.scale}}' controls="{{controls}}" bindcontroltap="controltap"
+    markers="{{mapTool.data.markers}}" polyline="{{mapTool.data.polyline}}" show-location bindmarkertap="markerClick">
+
+    <cover-image class='search_view' src='/mipmap/search.png'></cover-image>
+    <cover-image class="gwj" src="/mipmap/gwj.png" bindtap='gwj_click' />
+    <cover-image class="wwj" src="/mipmap/wwj.png" bindtap='wwj_click' />
+    <cover-image class="amy" src="/mipmap/amy.png" bindtap='amy_click' />
+    <cover-image class="back" src="/mipmap/return.png" hidden='{{hidden}}' bindtap='back_click' />
+    <cover-image class="postion" src="/mipmap/location.png" bindtap='postion_click' />
+    <cover-image class="scan" src="/mipmap/sys.png" bindtap='scan_click' />
+    <cover-image class="user" src="/mipmap/person.png" bindtap='user_click' />
+
+    <cover-view class='mac_view' hidden='{{hiddenBottom}}' bindtap='cover_tap'>
+      <cover-view style='display:flex;margin-top:40rpx;'>
+        <cover-image src='{{marker.iconPath}}' style='width:40rpx;height:45rpx;margin-left:30rpx;margin-right:30rpx;'></cover-image>
+        <cover-view style='font-size:24rpx;width:510rpx'>{{fontOne}}</cover-view>
+      </cover-view>
+      <cover-view class='ver_layout'>
+        <cover-image src='/mipmap/jl.png' style='width:28rpx;height:25rpx;margin-right:20rpx'></cover-image>
+        <cover-view style='font-size:24rpx;'>距离{{fontTwo[0]}}</cover-view>
+        <cover-image src='/mipmap/bx.png' style='width:28rpx;height:25rpx;margin-right:20rpx;margin-left:80rpx;'></cover-image>
+        <cover-view style='font-size:24rpx;'>{{fontTwo[1]}}</cover-view>
+      </cover-view>
+
+    </cover-view>
+  </map>
+</view>

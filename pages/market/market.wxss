@@ -1,0 +1,176 @@
+/* pages/market/market.wxss */
+
+.tab-h {
+  height: 88rpx;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 80rpx;
+  background: #fff;
+  font-size: 16px;
+  white-space: nowrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  
+}
+
+.tab-item {
+  margin: 0 36rpx;
+  display: inline-block;
+  color: #989898;
+}
+
+.tab-item.active {
+  color: #db434e;
+  position: relative;
+}
+
+.tab-item.active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 15rpx;
+  left: 3rpx;
+}
+
+.item-ans {
+  width: 100%;
+  display: flex;
+  flex-grow: row no-wrap;
+  justify-content: space-between;
+  padding: 30rpx;
+  box-sizing: border-box;
+  height: 180rpx;
+  align-items: center;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.current_layout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20rpx;
+  background: #f1f1f3;
+}
+
+.item_layout {
+  width: 236rpx;
+  height: 340rpx;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  text-align: center;
+  display: inline-block;
+}
+
+.product_img {
+  /* width:  */
+  width: 188rpx;
+  height: 140rpx;
+  margin-top: 20rpx;
+}
+
+.product_name {
+  margin-top: 22rpx;
+  display: block;
+  font-size: 30rpx;
+  color: #404040;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  justify-content: flex-start;
+}
+
+.product_des {
+  display: block;
+  font-size: 24rpx;
+  color: #c7c7c7;
+}
+
+.buy_icon {
+  margin-top: 12rpx;
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+  margin-bottom: 10rpx;
+}
+
+.title_name {
+  display: block;
+  height: 64rpx;
+  width: 97.5%;
+  font-size: 30rpx;
+  line-height: 64rpx;
+  color: #989898;
+  background: #f1f1f3;
+  padding-left: 2.5%;
+  
+}
+
+.tab_layout {
+  width: 95%;
+  background: #f1f1f3;
+  padding: 0 2.5% 0 2.5%;
+}
+
+.price_font {
+  color: #db434e;
+  margin-left: 20rpx;
+  font-size: 32rpx;
+}
+
+.modeal {
+  position: absolute;
+  z-index: 99;
+  width: 645rpx;
+  height: 790rpx;
+  border-radius: 10rpx;
+  background: #fff;
+  top: 90rpx;
+  left: 52rpx;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.cancal_modeal {
+  position: absolute;
+  z-index: 99;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  bottom: 192rpx;
+  left: 336rpx;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pay_btn {
+  display: block;
+  width: 520rpx;
+  height: 90rpx;
+  color: #fff;
+  background: #db434e;
+  border-radius: 45rpx;
+  line-height: 90rpx;
+  font-size: 34rpx;
+  margin-left: 60rpx;
+}
+
+.pay_btn::after {
+  border-top-left-radius: 45rpx;
+  border-top-right-radius: 45rpx;
+  border-bottom-left-radius: 45rpx;
+  border-bottom-right-radius: 45rpx;
+}
+
+.big_pic {
+  width: 420rpx;
+  height: 360rpx;
+  margin-top: 70rpx;
+}
+
+

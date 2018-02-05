@@ -1,0 +1,93 @@
+/* pages/user/shareInfo/shareInfo.wxss */
+
+page {
+  background-color: #e92e29;
+}
+
+.title_fount {
+  color: #d33333;
+  font-size: 32rpx;
+  margin-top: 120rpx;
+  line-height: 32rpx;
+}
+
+.coin_num {
+  font-size: 36rpx;
+  line-height: 36rpx;
+  color: #d33333;
+  margin-top: -20rpx;
+}
+
+.coin_img {
+  width: 184rpx;
+  height: 122rpx;
+  margin-top: -50rpx;
+}
+
+.share_btn {
+  width: 540rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 32rpx;
+  background: #ffe44b;
+  color: #d33333;
+  text-align: center;
+  margin-bottom: 30rpx;
+  border-radius: 45rpx;
+}
+
+.share_btn::after {
+  border-radius: 45rpx;
+}
+
+.content_layout {
+  width: 700rpx;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.div_class {
+  font-size: 32rpx;
+  text-align: left;
+  justify-content: flex-start;
+  padding: 5rpx;
+  text-indent: -30rpx;
+  margin-left: 40rpx;
+  margin-bottom: 10rpx;
+}
+
+.title_font {
+  color: #fff;
+  font-size: 32rpx;
+  margin-top: 40rpx;
+  text-align: left;
+  justify-content: flex-start;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  line-height: 45rpx;
+}
+
+.hor_layout {
+  width: 100%;
+  justify-content: space-between;
+  padding-left: 50rpx;
+  padding-right: 40rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx #dc5e57;
+}
+
+.look_info {
+  color: #ffd72d;
+  border: 1rpx solid #ffd72d;
+  line-height: 56rpx;
+  font-size: 28rpx;
+  text-align: center;
+  margin-top: 40rpx;
+  margin-right: 40rpx;
+  border-radius: 28rpx;
+  width: 115rpx;
+}

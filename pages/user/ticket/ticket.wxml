@@ -1,0 +1,11 @@
+<!--pages/user/ticket/ticket.wxml-->
+<view class='title_layout'>
+  <text class='title_font' wx:if="{{selected == 0}}" style='color:#db434e' bindtap='currentClick' data-curr='0'>未使用</text>
+  <text class='title_font' wx:elif="{{selected==1}}" bindtap='currentClick' data-curr='0'>未使用</text>
+  <text class='title_font' wx:if="{{selected == 1}}" style='color:#db434e' bindtap='currentClick' data-curr='1'>已使用</text>
+  <text class='title_font' wx:elif="{{selected==0}}" bindtap='currentClick' data-curr='1'>已使用</text>
+</view>
+<scroll-view wx:for="{{ticketList}}">
+  <image wx:if="{{selected==0}}" src='/mipmap/yh.png' class='last_img' mode='aspectFit'></image>
+  <image wx:if="{{selected==1}}" src='/mipmap/ysy_yh.png' class='last_img' mode='aspectFit'></image>
+</scroll-view>

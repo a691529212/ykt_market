@@ -1,0 +1,73 @@
+/* pages/crane_machine/crane_machine.wxss */
+
+.head_img {
+  width: 100%;
+  height: 350rpx;
+}
+
+.title_font {
+  font-size: 32rpx;
+  color: #989898;
+  margin-top: 65rpx;
+  margin-bottom: 35rpx;
+}
+
+.last_coin {
+  font-size: 54rpx;
+  color: #404040;
+}
+
+.last_coins {
+  font-size: 32rpx;
+  color: #404040;
+}
+
+.recharge {
+  width: 114rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  border: 1rpx solid #db434f;
+  border-radius: 50rpx;
+  color: #db434f;
+  text-align: center;
+  font-size: 32rpx;
+  margin-top: 39rpx;
+}
+
+.line {
+  width: 100%;
+  border: 1rpx solid #f2f2f2;
+  margin-top: 69rpx;
+}
+
+.hor_layout {
+  display: flex;
+  justify-content: space-between;
+  width: 630rpx;
+}
+
+.play {
+  padding-top: 10rpx;
+  margin-top: 80rpx;
+  width: 290rpx;
+  height: 90rpx;
+  line-height: 40rpx;
+  background: #db434f;
+  color: #fff;
+  border-radius: 50rpx;
+  font-size: 28rpx;
+  text-align: center;
+  margin-bottom: 54rpx;
+  align-items: center;
+}
+
+.plays {
+  font-size: 24rpx;
+  display: block;
+  text-align: center;
+}
+
+.scan {
+  font-size: 32rpx;
+  color: #989898;
+}

@@ -1,0 +1,21 @@
+<!--pages/payResult/payResult.wxml-->
+<view wx:if="{{payResult}}" class='container' style='height:350rpx;'>
+  <image src='/mipmap/succ.png' class='icon_view'></image>
+  <text class='result_font'>支付成功</text>
+  <text class='des_font'>記得從底部取物處取走商品哦</text>
+  <view class='hor_layout' style='margin-top:50rpx;margin-bottom:50rpx;'>
+    <text class='des_font' style='  border-bottom: 1rpx solid #c7c7c7;padding-bottom:2rpx;'>繼續購買></text>
+    <text class='des_font' style='  border-bottom: 1rpx solid #c7c7c7;padding-bottom:2rpx;'>查看訂單></text>
+    <text class='des_font' style='  border-bottom: 1rpx solid #c7c7c7;padding-bottom:2rpx;' bindtap='go_main'>返回首頁></text>
+  </view>
+</view>
+<view wx:if="{{!payResult}}" class='container' style='height:480rpx;'>
+  <image src='/mipmap/fail.png' class='icon_view'></image>
+  <text class='result_font'>支付失败</text>
+  <text class='des_font'>支付遇到问题了,尝试重新支付吧!</text>
+  <button class='re_pay_btn'>重新支付</button>
+  <text class='des_font' style='border-bottom: 1rpx solid #c7c7c7;padding-bottom:2rpx;margin-bottom:50rpx;' bindtap='go_main'>返回首頁></text>
+</view>
+<view class='bottom_layout' style='height:{{residue}}'>
+  <text wx:if="{{payResult}}" style='line-hight:66rpx ;color:#929898;font-size:30rpx;margin-left:30rpx; '>訂單信息</text>
+</view>

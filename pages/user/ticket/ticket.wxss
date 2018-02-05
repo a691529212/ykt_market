@@ -1,0 +1,26 @@
+/* pages/user/ticket/ticket.wxss */
+
+.title_layout {
+  display: flex;
+  line-height: 88rpx;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  border-top: 1rpx solid #f1f3f3;
+  border-bottom: 15rpx solid #f1f3f3;
+}
+
+.title_font {
+  font-size: 26rpx;
+  color: #6b6b6b;
+  text-align: center;
+  width: 50%;
+}
+
+.last_img {
+  width: 626rpx;
+  height: 290rpx;
+  justify-content: center;
+  margin-top: 20rpx;
+  margin-left: 60rpx;
+}

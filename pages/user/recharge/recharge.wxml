@@ -1,0 +1,16 @@
+<!--pages/user/recharge/recharge.wxml-->
+<view class='container' style='height:400rpx'>
+  <text style='font-size:32rpx;color:#989898;margin-top:65rpx;'>剩余游戏币总数</text>
+  <view style=''>
+    <text style='font-size:54rpx;'>{{payList.balance}}</text>
+    <text style='font-size:32rpx;'>币</text>
+  </view>
+  <view class='line'></view>
+  <text class='title'>游戏币充值</text>
+
+</view>
+<view wx:for="{{payList.list}}" wx:key="{{index}}" class='item_layout' bindtap='itemClick' data-info='{{item}}'>
+  <text class='coin_num'>{{item.coin}}币</text>
+  <text class='praice'>¥ {{item.price}}</text>
+
+</view>

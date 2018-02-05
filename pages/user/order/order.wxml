@@ -1,0 +1,19 @@
+<!--pages/user/order/order.wxml-->
+<scroll-view bindscrolltolower="onBottom">
+  <view wx:for="{{orderList}}" class='item_layout' wx:key="{{index}}">
+    <image src='{{item.img}}' style='height:160rpx; width:160rpx;'></image>
+    <view class='vertical_layout'>
+      <text class='title'> {{item.title}}</text>
+      <text wx:if="{{item.payment==1}}" style='display:block;color:#db434e;font-size:32rpx;'>¥ {{item.price}}</text>
+      <text wx:elif="{{item.payment==2}}" style='display:block;color:#db434e;font-size:32rpx;'> {{item.coin}}币</text>
+      <text style='display:block;font-size:28rpx;color:#989898'>{{item.create_time}}</text>
+    </view>
+
+
+    <!-- <text wx:if="{{item.status==0}}">待支付</text>
+  <text wx:elif="{{item.status==1}}">已支付未出货</text>
+  <text wx:elif="{{item.status==2}}">出货成功</text>
+  <text wx:elif="{{item.status==3}}">已支付但是没货</text>
+  <text wx:elif="{{item.status==4}}">已支付出货失败</text> -->
+  </view>
+</scroll-view>

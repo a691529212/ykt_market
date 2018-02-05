@@ -1,0 +1,17 @@
+<!--pages/user/report/report.wxml-->
+<view class='scan_layout' bindtap='scan'>
+  <image src='/mipmap/fk_sys.png' style='height:49rpx;width:49rpx;margin-right:40rpx'></image>
+  <text style='color:#404040;font-size:32rpx;'>扫一扫确认机器，反馈问题</text>
+  <text style='color:#db434e;font-size:32rpx;'>*</text>
+</view>
+<view class='container'>
+  <checkbox-group>
+    <label class='checkbox' wx:for="{{itemList}}" wx:key="{{index}}" class='item_layout' bindtap='checkChanged' data-info='{{item}}'>
+      <text class='title_font'>{{item.title}}</text>
+      <checkbox checked='{{item.checked}}' style='display:block ; color : red'></checkbox>
+    </label>
+  </checkbox-group>
+  <textarea class='report_edit' placeholder="备注" bindinput='input'>
+  </textarea>
+  <button class='confirm' bindtap='confirm'>提交</button>
+</view>

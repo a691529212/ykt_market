@@ -1,0 +1,60 @@
+/* pages/user/user.wxss */
+
+.canvas {
+  width: 100%;
+  height: 360rpx;
+}
+
+.item_layout {
+  line-height: 100rpx;
+  width: 650rpx;
+  height: 100rpx;
+  align-items: center;
+  background: #fff;
+  display: flex;
+  margin-left: 50rpx;
+}
+
+.font {
+  font-size: 28rpx;
+  margin-top: 35rpx;
+  color: #fff;
+  margin-bottom: 49rpx;
+}
+
+.avator {
+  z-index: 99;
+  width: 150rpx;
+  height: 150rpx;
+  border: 5rpx solid #fff;
+  border-radius: 80rpx;
+  background: #fff;
+  margin-top: -280rpx;
+}
+
+.des_font {
+  position: relative;
+}
+
+.right_icon {
+  width: 11rpx;
+  height: 20rpx;
+  margin-right: 50rpx;
+  position: absolute;
+  right: 0;
+  justify-content: center;
+  align-self: center;
+  margin-top: 40rpx;
+}
+
+.icon_cls {
+  width: 38rpx;
+  height: 38rpx;
+}
+
+.info {
+  width: 100%;
+  justify-content: space-between;
+  margin-left: 40rpx;
+  border-bottom: 1rpx solid #f4f4f4 ;
+}

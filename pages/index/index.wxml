@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<button bindtap='scan' bindtap='scan'>扫一下哦</button>
+<view class="wxgrid">
+  <view wx:for="{{wxgrid.rows}}" wx:for-index="i" class="wxrow">
+    <view wx:for="{{wxgrid.cols}}" wx:for-index="j" class="wxcol" style="width:{{item.width}}%;">
+      <view class="wxclassify" bindtap='itemClick' data-info='{{wxgrid.data.classifies[i][j]}}' style='height : 200rpx; margin-top:50rpx'>
+        <image class="wxclassify-img" mode="aspectFit" src="{{wxgrid.data.classifies[i][j].pic}}" style='margin-top:30rpx'></image>
+        <text class='font'>{{wxgrid.data.classifies[i][j].name}}</text>
+      </view>
+    </view>
+  </view>
+</view>

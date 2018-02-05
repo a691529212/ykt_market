@@ -1,0 +1,69 @@
+/**app.wxss**/
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.modeal {
+  position: absolute;
+  z-index: 99;
+  width: 645rpx;
+  height: 790rpx;
+  border-radius: 10rpx;
+  background: #fff;
+  top: 90rpx;
+  left: 52rpx;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.cancal_modeal {
+  position: absolute;
+  z-index: 99;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  bottom: 192rpx;
+  left: 336rpx;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pay_btn {
+  display: block;
+  width: 520rpx;
+  height: 90rpx;
+  color: #fff;
+  background: #db434e;
+  border-radius: 45rpx;
+  line-height: 90rpx;
+  font-size: 34rpx;
+  margin-left: 60rpx;
+}
+
+.pay_btn::after {
+  border-top-left-radius: 45rpx;
+  border-top-right-radius: 45rpx;
+  border-bottom-left-radius: 45rpx;
+  border-bottom-right-radius: 45rpx;
+}
+
+.big_pic {
+  width: 407rpx;
+  height: 370rpx;
+  margin-top: 60rpx;
+}
+
+.bac {
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+  z-index: 99;
+}

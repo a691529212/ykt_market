@@ -1,0 +1,32 @@
+/* pages/user/order/order.wxss */
+
+page {
+  background-color: #f1f1f3;
+}
+
+.item_layout {
+  width: 100%;
+  align-items: center;
+  height: 200rpx;
+  padding: 20rpx;
+  background: #fff;
+  border-bottom: 20rpx solid #f1f1f3;
+  display: flex;
+}
+
+.vertical_layout {
+  flex-direction: column;
+  margin-left: 20rpx;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.title {
+  font-size: 32rpx;
+  color: #404040;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 400rpx;
+}

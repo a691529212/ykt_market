@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/map/map",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/user/user",
+    "pages/market/market",
+    "pages/payResult/payResult",
+    "pages/crane_machine/crane_machine",
+    "pages/armchair/armchair",
+    "pages/user/shareInfo/shareInfo",
+    "pages/user/report/report",
+    "pages/user/recharge/recharge",
+    "pages/user/order/order",
+    "pages/user/ticket/ticket"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "营客通无人",
+    "navigationBarTextStyle": "black"
+  }
+}

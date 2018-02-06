@@ -15,6 +15,9 @@ Page({
     isUsableCoupon: '',
   },
 
+  goBack: function (callBack) {
+    setTimeout(callBack, 1000);
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -43,13 +46,23 @@ Page({
     netTool.request("api/v1/wwj/" + code, null, function (res) {
       console.log("query ====>", res)
       if (res.msg == "未找到机器信息") {
-        wx.navigateBack();
+        that.goBack(() => {
+          wx.navigateBack()
+        })
+      } else if (res.code == 10501) {
+        wx.showToast({
+          title: res.msg,
+        })
+        that.goBack(() => {
+          wx.navigateBack()
+        })
+      } else {
+        that.setData({
+          balance: res.balance,
+          needCoin: res.needCoin,
+          isUsableCoupon: res.isUsableCoupon
+        })
       }
-      that.setData({
-        balance: res.balance,
-        needCoin: res.needCoin,
-        isUsableCoupon: res.isUsableCoupon
-      })
     })
     that.setData({
       code: code,

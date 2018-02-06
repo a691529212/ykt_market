@@ -28,7 +28,9 @@ Page({
     height: '',
     isEmpty: false,
   },
-
+  goback: function (callBack) {
+    setTimeout(callBack, 1000)
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -40,6 +42,16 @@ Page({
     var code = options.code;
     netTool.request("api/v1/gwj/product/" + code, null, function (res) {
       console.log(res)
+      if (res.code == 10501) {
+        wx.showToast({
+          title: res.msg,
+        })
+        that.goback(function () {
+          wx.navigateBack({
+          })
+        })
+
+      }
       var sortList = res.list;
       that.setData({
         sortList: sortList,
@@ -65,7 +77,7 @@ Page({
       })
     })
   },
-  
+
   itemClick: function (e) {
     console.log("click")
     var info = e.currentTarget.dataset.info;

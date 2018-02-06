@@ -1,5 +1,5 @@
 <!--pages/crane_machine/crane_machine.wxml-->
-<image src='/mipmap/wwj_img.png' class='head_img'></image>
+<image src='/mipmap/img_wwj.png' class='head_img'></image>
 <view class='container'>
   <text class='title_font'>剩余游戏币总数</text>
   <view style='text-align: center;'>

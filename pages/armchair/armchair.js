@@ -14,6 +14,9 @@ Page({
     code: null
   },
 
+  goBack: function (callBack) {
+    setTimeout(callBack, 1000);
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -27,12 +30,27 @@ Page({
     netTool.request("api/v1/amy/" + code, {}, function (res) {
       console.log(res)
       if (res.msg == "没有找到按摩椅套餐") {
-        wx.navigateBack();
+        wx.showToast({
+          title: res.msg,
+        })
+        that.goBack(function () {
+          wx.navigateBack({
+          })
+        })
+      } else if (res.code == 10400) {
+        wx.showToast({
+          title: res.msg,
+        })
+        that.goBack(function () {
+          wx.navigateBack({
+          })
+        })
+      } else {
+        that.setData({
+          jsonData: res,
+          code: code
+        })
       }
-      that.setData({
-        jsonData: res,
-        code: code
-      })
     })
     wx.getSystemInfo({
       success: function (res) {

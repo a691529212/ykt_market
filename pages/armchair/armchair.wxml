@@ -1,9 +1,14 @@
 <!--pages/armchair/armchair.wxml-->
 <image src='{{jsonData.banner}}' class='head_img'></image>
 <view wx:for="{{jsonData.list}}" wx:key="{{index}}" class='item_layout' data-info='{{item}}' bindtap='itemClick'>
-  <text style='font-size:32rpx;color:#404040;line-height:44rpx;'>{{item.title}}</text>
-  <text style='display: block ; font-size:28rpx;color : #989898;line-height:40rpx;'>¥ {{item.price}}</text>
-  <text style='display: block;font-size:28rpx;color: #db434e;line-height:40rpx;'>{{item.duration}}分钟</text>
+  <text style='font-size:28rpx;color:#404040;line-height:28rpx;margin-top:40rpx'>{{item.title}}</text>
+  <text style='display: block ; font-size:24rpx;color : #989898;line-height:24rpx;margin-top:25rpx'>{{item.duration}}分钟</text>
+  <view style='display:flex ; align-items: center;width:100%;text-align: center;justify-content: center;;margin-top:25rpx'>
+    <text style='display: block;font-size:24rpx;color: #db434e;line-height:40rpx;align-self: flex-end'>¥</text>
+    <text style='font-size:24rpx;color: #db434e;line-height:40rpx;font-size:40rpx'>{{item.price}}</text>
+  </view>
+
+  <view style='display:block ; font-size:28rpx;color:#ffffff;' class='choose_btn'>选择</view>
 </view>
 
 <!--modeal  -->

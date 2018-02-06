@@ -11,6 +11,7 @@ Page({
     systemInfo: '',
     hiddelMoeal: true,
     info: '',
+    code: null
   },
 
   /**
@@ -30,6 +31,7 @@ Page({
       }
       that.setData({
         jsonData: res,
+        code: code
       })
     })
     wx.getSystemInfo({
@@ -59,6 +61,7 @@ Page({
     var data = {
       product_id: this.data.info.id
     }
+    data.machine_id = that.data.code
     // netTool.request("api/v1/recharge", data, "POST", function (e) {
     //   console.log("支付", e)
     //   wx.requestPayment({

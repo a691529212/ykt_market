@@ -7,16 +7,30 @@
 
 .item_layout {
   display: inline-block;
-  width: 50%;
-  height: 200rpx;
-  flex-direction: column;
+  width: 260rpx;
+  height: 280rpx;
+  margin-left: 75rpx;
+  flex-direction: row-reverse;
   align-items: center;
   padding-top: 20rpx;
-  border-bottom: 2rpx solid #f1f1f3;
-  border-left: 2rpx solid #f1f1f3;
+  border: 1rpx solid #fe5461;
+  border-radius: 10rpx;
   justify-content: space-between;
   box-sizing: border-box;
   text-align: center;
   align-content: center;
-  
+  margin-top: 80rpx;
+}
+
+.choose_btn {
+  height: 70rpx;
+  text-align: center;
+  line-height: 70rpx;
+  width: 100%;
+  background: #fe5461;
+  border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+  display: flex;
+  position: relative;
+  top: 35rpx
 }

@@ -24,8 +24,6 @@ Page({
     })
     netTool.request("api/v1/coin", null, function (res) {
       console.log("_____", res)
-
-
       that.setData({
         payList: res
       })
@@ -52,6 +50,13 @@ Page({
           if (that.data.code) {
             wx.redirectTo({
               url: '/pages/crane_machine/crane_machine?showToast=1&code=' + that.data.code,
+            })
+          } else {
+            netTool.request("api/v1/coin", null, function (res) {
+              console.log("_____", res)
+              that.setData({
+                payList: res
+              })
             })
           }
 

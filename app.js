@@ -24,7 +24,7 @@ App({
     userInfo: null,
     code: null,
     // interface: "https://cj.360yingketong.com/",
-    interface: "https://less.dev.360yingketong.com/",
+    interface: "https://xcx.lesaosao.cn/",
     token: null,
     shareUserId: null,
   }

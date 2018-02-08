@@ -137,6 +137,12 @@ Page({
   },
 
   turnPage: function (type, code) {
+    if (code == 0) {
+      wx.showToast({
+        title: '设备维护中',
+      })
+      return;
+    }
     var url = "";
     switch (type) {
       case 1:

@@ -1,11 +1,22 @@
 /* pages/user/recharge/recharge.wxss */
 
 .item_layout {
-  width: 371rpx;
-  height: 198rpx;
+  width: 200rpx;
+  height: 140rpx;
+  margin-left: 35rpx;
+  margin-bottom: 25rpx;
   display: inline-block;
   align-items: center;
+  justify-content: center;
   border: 1rpx solid #f1f1f3;
+  border-radius: 10rpx;
+}
+
+.coin_info {
+  position: absolute;
+  top: 290rpx;
+  justify-content: flex-start;
+  left: 80rpx;
 }
 
 .line {
@@ -21,12 +32,13 @@
 }
 
 .coin_num {
-  margin-top: 50rpx;
-  display: block;
+  margin-top: 35rpx;
   font-size: 40rpx;
   color: #404040;
   text-align: center;
   justify-content: center;
+  align-self: center;
+  margin-left: 65rpx;
 }
 
 .praice {

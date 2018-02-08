@@ -1,16 +1,29 @@
 <!--pages/user/recharge/recharge.wxml-->
-<view class='container' style='height:400rpx'>
-  <text style='font-size:32rpx;color:#989898;margin-top:65rpx;'>剩余游戏币总数</text>
+<view class='container' style='height:380rpx;border-bottom: 20rpx solid #f1f1f3;'>
+  <image src='/mipmap/top.png' style='width:650rpx;height:320rpx;margin-top:30rpx'></image>
+  <!-- <text style='font-size:32rpx;color:#989898;margin-top:65rpx;'>剩余游戏币总数</text>
   <view style=''>
     <text style='font-size:54rpx;'>{{payList.balance}}</text>
     <text style='font-size:32rpx;'>币</text>
   </view>
-  <view class='line'></view>
-  <text class='title'>游戏币充值</text>
+  <view class='line'></view> -->
+  <view style='color:#ffffff' class='coin_info'>
+    <text style='font-size:24rpx;margin-right:35rpx'>游戏币余额</text>
+    <text style='font-size:40rpx;'>{{payList.balance}}</text>
+    <text style='font-size:24rpx'>币</text>
+  </view>
 
 </view>
+<view style='width:100%'>
+  <text class='title'>游戏币充值</text>
+</view>
+
 <view wx:for="{{payList.list}}" wx:key="{{index}}" class='item_layout' bindtap='itemClick' data-info='{{item}}'>
-  <text class='coin_num'>{{item.coin}}币</text>
+  <view style='justify-content: center;align-items: center;margin-top: 30rpx;'>
+    <text class='coin_num'>{{item.coin}}</text>
+    <text style='font-size:24rpx;'>币</text>
+  </view>
+
   <text class='praice'>¥ {{item.price}}</text>
 
 </view>

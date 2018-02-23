@@ -227,7 +227,6 @@ Page({
   markerClick: function (e) {
     var that = this;
     var markerId = e.markerId;
-
     mapTool.data.setPolylineByMarkerId(markerId, function () {
       var markers = mapTool.data.markers;
       for (let i = 0; i < markers.length; i++) {

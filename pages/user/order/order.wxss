@@ -17,9 +17,9 @@ page {
 .vertical_layout {
   flex-direction: column;
   margin-left: 20rpx;
+  padding-right: 20rpx;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .title {
@@ -29,4 +29,5 @@ page {
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 400rpx;
+  box-sizing: inherit;
 }

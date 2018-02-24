@@ -1,7 +1,7 @@
 <!--pages/user/order/order.wxml-->
 <scroll-view bindscrolltolower="onBottom">
   <view wx:for="{{orderList}}" class='item_layout' wx:key="{{index}}">
-    <image src='{{item.img}}' style='height:160rpx; width:160rpx; background: red ;mode : aspectFit'></image>
+    <image src='{{item.img}}' style='height:160rpx; width:160rpx;mode : aspectFit'></image>
     <view class='vertical_layout'>
       <text class='title'> {{item.title}}</text>
       <text wx:if="{{item.payment==1}}" style='display:block;color:#db434e;font-size:32rpx;'>¥ {{item.price}}</text>

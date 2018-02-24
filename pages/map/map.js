@@ -36,6 +36,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    
     // var data = {
     //   phone : "18210399566",
     //   code : 866821
@@ -50,12 +51,13 @@ Page({
     // })
     // console.log(JSON.stringify(data))
 
-    // weimaqi.outCoin("S15522", null, 1,(res)=>{
+    // weimaqi.outCoin("S15518", null, 1,(res)=>{
     //   console.log(res)
     // })
-    // weimaqi.deviceStatus("S15522",(res)=>{
+    // weimaqi.deviceStatus("S15518",(res)=>{
     //   console.log(res)
     // })
+
     var that = this;
     var str = options.q;
     if (str) {
@@ -118,7 +120,7 @@ Page({
       success: function (e) {
         wx.hideLoading;
         console.log(e)
-        if (e.data.code == 10500) {
+        if (e.data.code == 10501) {
           wx.hideLoading();
           wx.showToast({
             title: '设备不在线',
